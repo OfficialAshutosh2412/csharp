@@ -1,5 +1,6 @@
 ﻿
 using OOPs;
+using System.ComponentModel;
 using System.Runtime.CompilerServices;
 
 internal class Program
@@ -122,5 +123,74 @@ internal class Program
         //sc.Signup();
         //sc.Signin();
 
+        //SealedClass sc = new();
+        //sc.disply();
+
+        //to hide child methods and expose parent's methods, jiska reference type uska method chalega
+        //Bill b = new GstBill();
+        //Console.WriteLine(b.cal(100));
+
+        //to hide parent's methods and expose child methods. jiska reference type uska method chalega
+        //GstBill gs = new GstBill();
+        //Console.WriteLine(gs.cal(100)); 
+
+        //MyCode m1 = new MyCode();
+        //Console.WriteLine(m1.Div(10, 0));
+        //Console.WriteLine("------------------------------------------------------------------");
+
+        //FinallyKeyword m2 = new();
+        //Console.WriteLine(m2.Div(10, 0));
+        //Console.WriteLine("------------------------------------------------------------------");
+
+        //NegativeNumber m3 = new();
+        //Console.WriteLine(m3.GetNumber(-1));
+        //Console.WriteLine("------------------------------------------------------------------");
+
+        //NumberAcceptor m4 = new();
+        //Console.WriteLine(m4.GetNumber(-1));
+        //Console.WriteLine("------------------------------------------------------------------");
+
+        //AgeAcceptor m5 = new();
+        //Console.WriteLine(m5.GetAge(55));
+        //Console.WriteLine("------------------------------------------------------------------");
+
+        //NonGenericArrayList nal = new();
+        //nal.show();
+
+        //NonGenericHastTable hash = new();
+        //hash.show();
+
+        //NonGenericSortedList ns = new NonGenericSortedList();
+        //ns.show();
+        //GenericSortedList gs = new();
+        //gs.show();
+
+        //NonGenericStack stk = new();
+        //stk.show();
+        //stk.PopElement();
+        //stk.show();
+
+        //GenericStack stk = new();
+        //stk.show();
+        //stk.PopElement();
+        //stk.show();
+
+        //NonGenericQueue que = new();
+        //que.show();
+        //que.RemoveElement();
+        //que.show();
+
+        //GenericQueue que = new();
+        //que.show();
+        //que.RemoveElement();
+        //que.show();
+
+        //GenericList gl = new();
+        //gl.show();
+        //GenericListObject glo = new();
+        //glo.show();
+
+        //GenericDictionary gd = new();
+        //gd.show();
     }
 }
