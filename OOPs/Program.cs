@@ -192,5 +192,62 @@ internal class Program
 
         //GenericDictionary gd = new();
         //gd.show();
+
+
+        //DelegateClass deg = new();
+        //Calculate calc = new Calculate(deg.Add);
+        //calc += deg.Div;
+        //calc += deg.Mul;
+        //calc += deg.Sub;
+        //calc(10, 2);
+
+        //single cast
+        //LatestDelegateExample deg = new();
+        //Action<int, int> op = deg.Add;
+        //op(10, 2);
+
+        //Processor process = new();
+        //OperationFunctions op = new();
+        //process.Execute(10, 2, op.Add);
+        //process.Execute(10, 2, op.Sub);
+
+        //sinle thread
+        //SingleThreadExample single = new();
+        //ThreadStart ts = new ThreadStart(single.Display);
+        //Thread t = new Thread(ts);
+        //t.Start();
+
+
+        //multi-threading in old csharp
+        MultiThreadExample mt = new();
+        //thread 1
+        //ThreadStart t1 = new ThreadStart(mt.Display10);
+        //Thread thread1 = new Thread(t1);
+        //thread1.Start();
+        //thread 2
+        //ThreadStart t2 = new ThreadStart(mt.Display20);
+        //Thread thread2 = new Thread(t2);
+        //thread2.Start();
+
+        //multi-threading in modern c sharp csharp
+        //Thread t1 = new Thread(mt.Display10);
+        //Thread t2 = new Thread(mt.Display20);
+        //t1.Start();
+        //t2.Start();
+
+        //multi-threading in modern c sharp csharp shorter version
+        //new Thread(mt.Display10).Start();
+        //new Thread(mt.Display20).Start();
+
+        //thread pausing in multi-threading
+        Thread t1 = new(mt.Task1);
+        Thread t2 = new(mt.Task2);
+        Thread t3 = new(mt.Task3);
+        t1.Start();
+        t2.Start();
+        //like a border waiting line. Threads t1 and t2 executed parallely as usual, but main thread is wait untill they finished then run t3
+        t2.Join();
+        t3.Start();
+
     }
 }
